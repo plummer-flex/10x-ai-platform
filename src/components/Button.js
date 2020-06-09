@@ -7,7 +7,7 @@ import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 const nodes = {
   a: ({ to, children, type, ...props }) => (
-    <a {...props} href={to} target="_blank">
+    <a {...props} href={to} target="_blank" rel="noreferrer">
       {children}
     </a>
   ),

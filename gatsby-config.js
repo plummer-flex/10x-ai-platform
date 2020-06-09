@@ -48,7 +48,12 @@ module.exports = {
   },
   pathPrefix: process.env.BASEURL || '/',
   plugins: [
-    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        includePaths: ['node_modules/uswds'],
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-alias-imports`,
@@ -59,6 +64,7 @@ module.exports = {
           templates: 'src/templates',
           utils: 'src/utils',
           inline: 'src/inline',
+          uswds: 'node_modules/uswds',
         },
       },
     },
