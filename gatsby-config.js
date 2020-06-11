@@ -5,22 +5,9 @@ module.exports = {
     description: `Agency Name (EAC) Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     Aenean et sapien a leo auctor scelerisque quis nec magna. Sed dictum ante a risus vehicula facilisis.`,
     navigation: [
+      { text: 'Home', link: '/' },
       {
-        items: [{ text: 'Home', link: '/' }],
-      },
-      {
-        items: [{ text: 'Blog', link: '/blog' }],
-      },
-      {
-        items: [{ text: 'Document', link: '/document' }],
-      },
-      {
-        items: [
-          { text: 'Document with sidenav', link: '/document-with-sidenav' },
-        ],
-      },
-      {
-        title: 'Document submenu',
+        text: 'Document submenu',
         items: [
           { text: 'Navigation link', link: '/' },
           { text: 'Navigation link', link: '/' },
@@ -73,20 +60,6 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `blog-posts`,
-        path: `${__dirname}/src/blog-posts`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `documentation-pages`,
-        path: `${__dirname}/src/documentation-pages`,
       },
     },
     `gatsby-transformer-remark`,
